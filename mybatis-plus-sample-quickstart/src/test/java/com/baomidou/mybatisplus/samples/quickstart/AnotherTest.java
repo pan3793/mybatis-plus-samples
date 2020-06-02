@@ -2,21 +2,20 @@ package com.baomidou.mybatisplus.samples.quickstart;
 
 import com.baomidou.mybatisplus.samples.quickstart.entity.User;
 import com.baomidou.mybatisplus.samples.quickstart.mapper.UserMapper;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
 
-import javax.annotation.Resource;
-
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class SampleTest {
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
+@AutoConfigureMockMvc
+public class AnotherTest {
 
     @Resource
     private UserMapper userMapper;
